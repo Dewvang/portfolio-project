@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <nav-component></nav-component>
 </template>
+
+<script>
+import navComponent from '@/components/navComponent.vue'
+export default {
+  components: { navComponent },
+
+}
+</script>
+
+<style>
+
+</style>
