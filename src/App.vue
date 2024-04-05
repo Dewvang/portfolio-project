@@ -26,6 +26,6 @@ export default {};
 }
 
 body {
-  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  background-color: black;
 }
 </style>
