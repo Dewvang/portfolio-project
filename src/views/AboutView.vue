@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <nav-component></nav-component>
 </template>
 
@@ -12,4 +12,4 @@ export default {
 
 <style>
 
-</style>
+</style> -->

@@ -1,13 +1,24 @@
 <template>
   <body>
     <div class="container">
-      <router-view></router-view>
+      <nav-component></nav-component>
+      <head-component></head-component>
+      <!-- <router-view></router-view> -->
     </div>
   </body>
 </template>
 
 <script>
-export default {};
+import navComponent from "@/components/navComponent.vue";
+import headComponent from "@/components/headComponent.vue";
+export default {
+    components: { 
+      navComponent, 
+      headComponent
+    },
+    
+};
+
 </script>
 
 <style>

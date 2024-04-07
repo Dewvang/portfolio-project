@@ -1,6 +1,6 @@
-<template>
-  <nav-component></nav-component>
+<!-- <template>
   <header>
+    <nav-component></nav-component>
     <div class="header-content">
       <h1 class="gradient-text">Hi, I'm Dew.</h1>
       <h2>I'm an electrical engineer,</h2>
@@ -150,4 +150,4 @@ header img {
 }
 @media (min-width: 1121px) {
 }
-</style>
+</style> -->
