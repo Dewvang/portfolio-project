@@ -11,14 +11,14 @@
         </div>
 
         <div class="menu-list" :class="{ open: isMenuOpen }">
-            <p @click="toPages('about')">ABOUT</p>
-            <p @click="toPages('experience')">EXPERIENCE</p>
-            <p @click="toPages('skills')">SKILLS</p>
-            <p @click="toPages('education')">EDUCATION</p>
-            <p @click="toPages('project')">PROJECT</p>
-            <p @click="toPages('contact')">CONTACT</p>
+            <a  href="#exp">EXPERIENCE</a>
+            <a>EDUCATION</a>
+            <a>SKILLS</a>
+            <a>PROJECT</a>
+            <a>CONTACT</a>
         </div>
     </nav>
+    <hr class="hr-1" />
 </template>
 
 <script>
@@ -29,10 +29,6 @@ export default {
         };
     },
     methods: {
-        toPages(page) {
-            this.$router.push({ name: page }).catch(() => {});
-            this.isMenuOpen = false;
-        },
         toggleMenu() {
             this.isMenuOpen = !this.isMenuOpen;
         }
@@ -55,13 +51,14 @@ nav {
     display: flex;
     justify-content: space-between;
 }
-.menu-list p {
+.menu-list a {
     cursor: pointer;
     color: white;
     transition: color 0.3s ease;
     padding: 10px;
+    text-decoration: none;
 }
-.menu-list p:hover {
+.menu-list a:hover {
     color: red;
 }
 .hamburger-menu {

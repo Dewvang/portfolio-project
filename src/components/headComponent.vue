@@ -4,6 +4,12 @@
             <h1 class="gradient-text">Hi, I'm Dew.</h1>
             <h2>I'm an electrical engineer,</h2>
             <h2>but now I want to be a Dev.</h2>
+            <p>
+                I'm a freelance electrical engineer, but I'm eyeing a switch to front-end <br>
+                developer. With programming skills and a knack for computers fueled by my <br>
+                gaming obsession, it feels like the right move. Let's make this career <br> 
+                switch happen, shall we?
+            </p>
         </div>
         <div>
             <img :src="require('@/assets/Profile.png')" alt="" />
@@ -21,6 +27,7 @@ export default {
 header {
     display: flex;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .header-content {
@@ -44,6 +51,12 @@ header {
 .header-content h2 {
     font-size: 3rem;
     color: white;
+}
+
+.header-content p {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: white ;
 }
 
 @keyframes borderAnimation {
@@ -127,9 +140,15 @@ header img {
     .header-content h2 {
         font-size: 1.5rem;
     }
+
+    .header-content p {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: white;
+    }
 }
 
-@media (min-width: 570px) and (max-width: 1120px) {
+@media (min-width: 570px) and (max-width: 1300px) {
     header {
         display: flex;
         flex-direction: column-reverse;
@@ -161,5 +180,5 @@ header img {
     }
 }
 
-@media (min-width: 1121px) {}
+@media (min-width: 1301px) {}
 </style>
