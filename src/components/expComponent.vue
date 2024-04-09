@@ -147,4 +147,48 @@ export default {};
     box-shadow: 0 0 10px #a445b2;
     background: linear-gradient(180deg, rgb(21, 23, 47) 0%, rgba(16,17,37,1) 100%);
 }
+
+@media (max-width: 569px) {
+    .exp-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .exp-content-img-bg img{
+        width: 250px;
+        height: 250px;
+    }
+    .exp-content-text-box{
+        width: 100%;
+        margin-top: 25px ;
+    }
+    .exp-content-text h2{
+        font-size: 1.3rem;
+    }
+    .exp-content-text p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 570px) and (max-width: 1100px) {
+    .exp-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .exp-content-img-bg img{
+        width: 300px;
+        height: 300px;
+    }
+    .exp-content-text-box{
+        width: 100%;
+        margin-top: 25px ;
+    }
+    .exp-content-text h2{
+        font-size: 1.3rem;
+    }
+    .exp-content-text p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1101px) {}
 </style>
