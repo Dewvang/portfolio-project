@@ -1,12 +1,12 @@
 <template>
     <hr class="hr-1" />
-    <div class="exp">
+    <div class="exp" id="exp">
         <div class="exp-content-wrap">
             <h1>Experiences</h1>
-            <div class="exp-content" id="exp">
+            <div class="exp-content">
                 <div class="exp-content-img-bg">
                     <div class="exp-content-img">
-                        <img :src="require('@/assets/pic1.webp')" alt="" width="400" height="400" />
+                        <LottieAnimation :animationData="animationData" :loop="true" class="lottie-animation" />
                     </div>
                 </div>
                 <div class="exp-content-text-box">
@@ -32,15 +32,30 @@
 </template>
 
 <script>
-export default {};
+import { LottieAnimation } from 'lottie-web-vue';
+
+export default {
+    components: {
+        LottieAnimation,
+    },
+    data() {
+        return {
+            animationData: require('@/assets/Animation1.json'),
+        };
+    },
+};
 </script>
 
 <style scoped>
 .exp {
     color: white;
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-image: url('/src/assets/section.svg');
+    background-size: 120%;
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 .exp-content-wrap {
@@ -56,13 +71,22 @@ export default {};
     align-items: center;
 }
 
+.exp-content-text{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.exp-content-text:hover {
+    transform: scale(1.1);
+}
+
 .exp-content-wrap h1 {
     font-size: 2rem;
     text-align: center;
     text-shadow: 0 0 50px #a445b2;
 }
 
-.exp-content-img-bg{
+.exp-content-img-bg {
     background-image: linear-gradient(45deg, #3023ae 0%, #ff0099);
     background-blend-mode: multiply;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
@@ -75,48 +99,47 @@ export default {};
 
 @keyframes borderAnimation {
 
-0%,
-100% {
-    border-radius: 40% 60% 60% 40% / 40% 60% 60% 40%;
-}
+    0%,
+    100% {
+        border-radius: 40% 60% 60% 40% / 40% 60% 60% 40%;
+    }
 
-10% {
-    border-radius: 60% 40% 30% 70% / 40% 70% 30% 60%;
-}
+    10% {
+        border-radius: 60% 40% 30% 70% / 40% 70% 30% 60%;
+    }
 
-20% {
-    border-radius: 80% 20% 50% 50% / 50% 30% 70% 50%;
-}
+    20% {
+        border-radius: 80% 20% 50% 50% / 50% 30% 70% 50%;
+    }
 
-30% {
-    border-radius: 50% 50% 50% 50% / 40% 50% 50% 40%;
-}
+    30% {
+        border-radius: 50% 50% 50% 50% / 40% 50% 50% 40%;
+    }
 
-40% {
-    border-radius: 50% 50% 80% 20% / 80% 50% 50% 20%;
-}
+    40% {
+        border-radius: 50% 50% 80% 20% / 80% 50% 50% 20%;
+    }
 
-50% {
-    border-radius: 100%;
-}
+    50% {
+        border-radius: 100%;
+    }
 
-60% {
-    border-radius: 60% 40% 50% 50% / 70% 70% 30% 30%;
-}
+    60% {
+        border-radius: 60% 40% 50% 50% / 70% 70% 30% 30%;
+    }
 
-70% {
-    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
-}
+    70% {
+        border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    }
 
-80% {
-    border-radius: 50% 50% 50% 50% / 30% 70% 70% 30%;
-}
+    80% {
+        border-radius: 50% 50% 50% 50% / 30% 70% 70% 30%;
+    }
 
-90% {
-    border-radius: 30% 70% 30% 70% / 30% 70% 30% 70%;
+    90% {
+        border-radius: 30% 70% 30% 70% / 30% 70% 30% 70%;
+    }
 }
-}
-
 
 @keyframes moveUpDown {
     0% {
@@ -145,47 +168,58 @@ export default {};
     padding: 30px;
     border-color: #a445b2;
     box-shadow: 0 0 10px #a445b2;
-    background: linear-gradient(180deg, rgb(21, 23, 47) 0%, rgba(16,17,37,1) 100%);
+    background: linear-gradient(180deg,
+            rgb(21, 23, 47) 0%,
+            rgba(16, 17, 37, 1) 100%);
+}
+
+.lottie-animation {
+    width: 400px;
+    height: auto;
 }
 
 @media (max-width: 569px) {
-    .exp-content{
+    .exp-content {
         display: flex;
         flex-direction: column;
     }
-    .exp-content-img-bg img{
-        width: 250px;
-        height: 250px;
+
+    .lottie-animation {
+        width: 300px;
+        height: auto;
     }
-    .exp-content-text-box{
+
+    .exp-content-text-box {
         width: 100%;
-        margin-top: 25px ;
+        margin-top: 25px;
     }
-    .exp-content-text h2{
+
+    .exp-content-text h2 {
         font-size: 1.3rem;
     }
-    .exp-content-text p{
+
+    .exp-content-text p {
         font-size: 0.8rem;
     }
 }
 
 @media (min-width: 570px) and (max-width: 1100px) {
-    .exp-content{
+    .exp-content {
         display: flex;
         flex-direction: column;
     }
-    .exp-content-img-bg img{
-        width: 300px;
-        height: 300px;
-    }
-    .exp-content-text-box{
+
+
+    .exp-content-text-box {
         width: 100%;
-        margin-top: 25px ;
+        margin-top: 25px;
     }
-    .exp-content-text h2{
+
+    .exp-content-text h2 {
         font-size: 1.3rem;
     }
-    .exp-content-text p{
+
+    .exp-content-text p {
         font-size: 0.8rem;
     }
 }

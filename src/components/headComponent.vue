@@ -5,10 +5,10 @@
             <h2>I'm an electrical engineer,</h2>
             <h2>but now I want to be a Dev.</h2>
             <p>
-                I'm a freelance electrical engineer, but I'm eyeing a switch to front-end <br>
-                developer. With programming skills and a knack for computers fueled by my <br>
-                gaming obsession, it feels like the right move. Let's make this career <br> 
-                switch happen, shall we?
+                I'm a freelance electrical engineer eyeing a switch to front-end dev.
+                With programming skills and a passion for computers fueled by my gaming
+                obsession, it feels like the right move. Let's make this career switch
+                happen, shall we?
             </p>
         </div>
         <div>
@@ -18,16 +18,18 @@
 </template>
 
 <script>
-
-export default {
-};
+export default {};
 </script>
 
 <style scoped>
 header {
     display: flex;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    background-image: url("/src/assets/hero.svg");
+    background-size: 120%;
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 .header-content {
@@ -56,7 +58,7 @@ header {
 .header-content p {
     margin-top: 20px;
     font-size: 1rem;
-    color: white ;
+    color: white;
 }
 
 @keyframes borderAnimation {
@@ -116,7 +118,8 @@ header img {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom:50px ;
     }
 
     .header-content {
@@ -142,9 +145,7 @@ header img {
     }
 
     .header-content p {
-        margin-top: 10px;
-        font-size: 1rem;
-        color: white;
+        display: none;
     }
 }
 
@@ -154,7 +155,7 @@ header img {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
+        padding: 40px;
     }
 
     .header-content {

@@ -12,6 +12,8 @@
       <nav-component></nav-component>
       <head-component></head-component>
       <exp-component></exp-component>
+      <education-component></education-component>
+      <skills-component></skills-component>
     </div>
   </body>
 </template>
@@ -20,11 +22,15 @@
 import navComponent from "@/components/navComponent.vue";
 import headComponent from "@/components/headComponent.vue";
 import expComponent from "@/components/expComponent.vue";
+import educationComponent from "@/components/educationComponent.vue";
+import skillsComponent from "@/components/skillsComponent.vue";
 export default {
   components: {
     navComponent,
     headComponent,
     expComponent,
+    educationComponent,
+    skillsComponent,
   },
 };
 </script>
