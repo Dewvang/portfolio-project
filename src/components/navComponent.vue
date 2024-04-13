@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="logo">
-            <h1 @click="toPages('home')">LOGO</h1>
+            <h1 @click="toPages('home')">Portfolio</h1>
         </div>
         
         <div class="hamburger-menu" :class="{ open: isMenuOpen }" @click="toggleMenu">
@@ -11,9 +11,9 @@
         </div>
 
         <div class="menu-list" :class="{ open: isMenuOpen }">
-            <a  href="#exp">EXPERIENCE</a>
-            <a>EDUCATION</a>
-            <a>SKILLS</a>
+            <a href="#exp">EXPERIENCE</a>
+            <a href="#education">EDUCATION</a>
+            <a href="#skills"> SKILLS</a>
             <a>PROJECT</a>
             <a>CONTACT</a>
         </div>
