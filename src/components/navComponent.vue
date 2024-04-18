@@ -1,9 +1,11 @@
 <template>
     <nav>
         <div class="logo">
-            <h1 @click="toPages('home')">Portfolio</h1>
+            <a href="">
+                <h1>Portfolio</h1>
+            </a>
         </div>
-        
+
         <div class="hamburger-menu" :class="{ open: isMenuOpen }" @click="toggleMenu">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -14,8 +16,8 @@
             <a href="#exp">EXPERIENCE</a>
             <a href="#education">EDUCATION</a>
             <a href="#skills"> SKILLS</a>
-            <a>PROJECT</a>
-            <a>CONTACT</a>
+            <a href="#project">PROJECT</a>
+            <a href="#footer">CONTACT</a>
         </div>
     </nav>
     <hr class="hr-1" />
@@ -37,9 +39,15 @@ export default {
 </script>
 
 <style scoped>
-.logo{
+.logo {
     cursor: pointer;
 }
+
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -47,10 +55,12 @@ nav {
     color: white;
     margin-top: 10px;
 }
+
 .menu-list {
     display: flex;
     justify-content: space-between;
 }
+
 .menu-list a {
     cursor: pointer;
     color: white;
@@ -58,9 +68,11 @@ nav {
     padding: 10px;
     text-decoration: none;
 }
+
 .menu-list a:hover {
     color: red;
 }
+
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -89,25 +101,29 @@ nav {
 }
 
 @media (max-width: 569px) {
-    
+
     nav {
         display: flex;
         flex-direction: column;
     }
+
     .menu-list {
         display: none;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
-        transition: all 1s ease;    
+        align-items: center;
+        transition: all 1s ease;
     }
+
     .menu-list.open {
-        display: flex;        
+        display: flex;
     }
+
     .menu-list p {
         padding: 10px;
         margin: 5px 0;
     }
+
     .hamburger-menu {
         display: block;
     }
@@ -118,7 +134,8 @@ nav {
         display: flex;
         flex-direction: column;
     }
-    .menu-list{
+
+    .menu-list {
         margin-top: 20px;
     }
 }

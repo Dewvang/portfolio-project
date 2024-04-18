@@ -1,17 +1,17 @@
 <template>
     <hr class="hr-1" />
     <div class="skills" id="skills">
-        <h1>Programming</h1>
+        <h1>Dev Skill</h1>
         <div class="skills-dev">
             <div class="skills-item" v-for="skill in devSkill" :key="skill">
-                <img width="100" height="100" :src="require(`@/assets/${skill}.svg`)" alt="" />
+                <img width="90" height="90" :src="require(`@/assets/${skill}.svg`)" alt="" />
                 {{ capitalize(skill) }}
             </div>
         </div>
-        <h1>Other</h1>
+        <h1>Other Skill</h1>
         <div class="skills-engineer">
             <div class="skills-item" v-for="skill in engineerSkill" :key="skill">
-                <img width="100" height="100" :src="require(`@/assets/${skill}.svg`)" alt="" />
+                <img width="90" height="90" :src="require(`@/assets/${skill}.svg`)" alt="" />
                 {{ capitalize(skill) }}
             </div>
         </div>
@@ -22,8 +22,24 @@
 export default {
     data() {
         return {
-            devSkill: ['c','html','css','javascript','tailwind','vue','vscode','bootstrap'],
-            engineerSkill: ['autocad','sketchup','dialux','canva','github','git']
+            devSkill: [
+                'c',
+                'html',
+                'css',
+                'javascript',
+                'tailwind',
+                'vue',
+                'bootstrap',
+                'vscode'
+            ],
+            engineerSkill: [
+                'autocad',
+                'sketchup',
+                'dialux',
+                'canva',
+                'github',
+                'git'
+            ]
         }
     },
     methods: {
@@ -36,37 +52,39 @@ export default {
 </script>
 
 <style scoped>
-.skills{
+.skills {
     color: white;
     display: flex;
     flex-direction: column;
     padding-top: 50px;
     padding-bottom: 50px;
     background-image: url('/src/assets/hero.svg');
-    background-size: 120%; 
-    background-position: top; 
-    background-repeat: no-repeat; 
-    
+    background-size: 120%;
+    background-position: top;
+    background-repeat: no-repeat;
+
 }
-.skills-dev{
-    margin-top:20px ;
-    margin-bottom:50px ;
+
+.skills-dev {
+    margin-top: 20px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.skills-item{
+
+.skills-item {
     padding: 25px;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     text-align: center;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
-.skills-item img{
-    margin-bottom:10px ;
+.skills-item img {
+    margin-bottom: 10px;
 }
 
 .skills-item:hover {
@@ -84,9 +102,9 @@ h1 {
     text-shadow: 0 0 50px #a445b2;
 }
 
-.skills-engineer{
-    margin-top:20px ;
-    margin-bottom:50px ;
+.skills-engineer {
+    margin-top: 20px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
