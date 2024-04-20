@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="logo">
-            <a href="">
+            <a href="https://sittigon-port.netlify.app/">
                 <h1>Portfolio</h1>
             </a>
         </div>
