@@ -43,7 +43,7 @@ export default {
                 },
                 line: {
                     img: 'line.png',
-                    link: ['https://line.me/ti/p/SIlun-5TIK'],
+                    link: ['https://line.me/ti/p/vTjBcrM9E1'],
                 },
                 linkedin: {
                     img: 'linkedin.png',
@@ -84,14 +84,17 @@ footer {
 }
 
 .social-item {
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     padding: 10px;
-    border-radius: 100%;
+    border-radius:100% ;
     margin: 5px;
 }
+
 
 .social-item:hover {
     transform: scale(1.1);
